@@ -1,8 +1,9 @@
 :root {
-    --bg-red: #db9b9b;
-    --bg-green: #b8e4b4;
-    --text-dark: #1f1f1f;
-    --text-green: #083608;
+    --light-red: #eeabab;
+    --light-green: #ddffda;
+    --white: #ffffff;
+    --dark-red: #681818;
+    --dark-green: #0d530d;
 }
 
 * {
@@ -17,32 +18,35 @@ body {
     padding: 0;
 }
 
-/*HEADER*/
+/*----------HEADER----------*/
+
 header {
     width: 100%;
     height: 60px;
-    background: var(--bg-red);
-    border-bottom: 2px solid var(--text-dark);
+    background: var(--light-red);
+    border-bottom: 2px solid var(--dark-red);
 }
 
 #head-title {
     font-size: 1.8em;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--dark-red);
     text-align: center;
     text-decoration: underline;
     margin: 0;
     padding-top: 4px;
 }
 
-/*MAIN*/
+/*----------MAIN----------*/
+
 #main {
     padding: 0px 10px;
     text-align: center;
     display: block;
 }
 
-/*COLUMNS*/
+/*----------COLUMNS----------*/
+
 #left-column {
     float: left;
     width: 65%;
@@ -53,23 +57,24 @@ header {
     width: 35%;
 }
 
-/*MONEY*/
+/*----------MONEY & BETS----------*/
+
 #div-money {
-    background: var(--bg-green);
-    margin: 2em auto;
+    background: var(--light-green);
+    margin: 80px auto;
     width: 500px;
-    border: 2px solid var(--text-green);
+    border: 2px solid var(--dark-green);
 }
 
 #your-money, #bet {
-    color: var(--text-green);
+    color: var(--dark-green);
     font-weight: 600;
     margin: 0;
     padding: 1em;
 }
 
 #money, #bet-money {
-    color: var(--text-green);
+    color: var(--dark-green);
 }
 
 #bet-list {
@@ -79,10 +84,10 @@ header {
     padding: 30px 0;
 }
 
-#bet-list li {
+.bet-item {
     font-size: 1.7em;
     font-weight: 800;
-    color: var(--text-green);
+    color: var(--dark-green);
     background-image: url(/img/coin.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -91,6 +96,70 @@ header {
     margin: 10px;
 }
 
-/*ROULETTE*/
+/*----------ROULETTE----------*/
 
+#roulette {
+    width: 900px;
+    margin: 150px auto 0 auto;
+}
 
+#roulette-list {
+    background-image: linear-gradient(#226620ad, var(--light-green), var(--light-green), #226620ad);
+    list-style-type: none;
+    height: auto;
+    margin: 0;
+    padding: 50px 0;
+    border: 2px solid var(--dark-green);
+}
+
+.roulette-list-item {
+    display: inline;
+    margin: 40px;
+}
+
+.roulette-list-item img {
+    height: 140px;
+}
+
+/*----------WINS----------*/
+
+#wins {
+    background-color: var(--light-green);
+}
+
+#win-list {
+    list-style-type: none;
+    padding: 15px;
+}
+
+.win-list-item {
+    text-align: left;
+    background-color: var(--white);
+    border: 2px solid var(--dark-green);
+    margin: 20px;
+}
+
+.win-list-item img {
+    height: 70px;
+    padding: 0 4px;
+    margin: 0;
+}
+
+.your-win {
+    text-align: right;
+}
+
+/*----------BUTTON----------*/
+
+#button-div {
+    margin: 100px;
+}
+
+#button {
+    font-size: 3.5em;
+    text-transform: uppercase;
+    color: #011b05;
+    background-image: linear-gradient(#226620ad, var(--light-green), var(--light-green), #226620ad);
+    border: 2px solid var(--dark-green);
+    padding: 20px 40px;
+}
