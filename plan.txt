@@ -1,3 +1,5 @@
 1. Do HTML
 2. Do CSS
+    - style the page
 3. Do JS
+    - get the game working

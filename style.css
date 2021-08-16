@@ -1,0 +1,96 @@
+:root {
+    --bg-red: #db9b9b;
+    --bg-green: #b8e4b4;
+    --text-dark: #1f1f1f;
+    --text-green: #083608;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.2em;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+/*HEADER*/
+header {
+    width: 100%;
+    height: 60px;
+    background: var(--bg-red);
+    border-bottom: 2px solid var(--text-dark);
+}
+
+#head-title {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: center;
+    text-decoration: underline;
+    margin: 0;
+    padding-top: 4px;
+}
+
+/*MAIN*/
+#main {
+    padding: 0px 10px;
+    text-align: center;
+    display: block;
+}
+
+/*COLUMNS*/
+#left-column {
+    float: left;
+    width: 65%;
+}
+
+#right-column {
+    float: left;
+    width: 35%;
+}
+
+/*MONEY*/
+#div-money {
+    background: var(--bg-green);
+    margin: 2em auto;
+    width: 500px;
+    border: 2px solid var(--text-green);
+}
+
+#your-money, #bet {
+    color: var(--text-green);
+    font-weight: 600;
+    margin: 0;
+    padding: 1em;
+}
+
+#money, #bet-money {
+    color: var(--text-green);
+}
+
+#bet-list {
+    list-style-type: none;
+    margin: 25px;
+    height: 125px;
+    padding: 30px 0;
+}
+
+#bet-list li {
+    font-size: 1.7em;
+    font-weight: 800;
+    color: var(--text-green);
+    background-image: url(/img/coin.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline;
+    padding: 30px;
+    margin: 10px;
+}
+
+/*ROULETTE*/
+
+

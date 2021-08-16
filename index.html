@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Hedelmäpeli</title>
 </head>
 <body>
@@ -11,35 +12,39 @@
         <h1 id="head-title">Hedelmäpeli</h1>
     </header>
     <section id="main">
-        <div id="div-money">
-            <p id="your-money">Rahaa: <span id="money"></span></p>
-            <p id="bet">Panos: <span id="bet-money"></span></p>
-            <ul id="bet-list">
-                <li class="bet-item"></li>
-                <li class="bet-item"></li>
-                <li class="bet-item"></li>
-            </ul>
+        <div id="left-column">
+            <div id="div-money">
+                <p id="your-money">Rahaa: <span id="money"></span>€</p>
+                <p id="bet">Panos: <span id="bet-money"></span>€</p>
+                <ul id="bet-list">
+                    <li class="bet-item">1€</li>
+                    <li class="bet-item">2€</li>
+                    <li class="bet-item">3€</li>
+                </ul>
+            </div>
+
+            <div id="roulette">
+                <ul id="roulette-list">
+                    <li class="roulette-list-item"></li>
+                    <li class="roulette-list-item"></li>
+                    <li class="roulette-list-item"></li>
+                    <li class="roulette-list-item"></li>
+                </ul>
+            </div>
         </div>
 
-        <div id="roulette">
-            <ul id="roulette-list">
-                <li class="roulette-list-item"></li>
-                <li class="roulette-list-item"></li>
-                <li class="roulette-list-item"></li>
-                <li class="roulette-list-item"></li>
-            </ul>
-        </div>
+        <div id="left-column">
+            <div id="wins">
+                <ul id="win-list">
+                    <li class="win-list-item"></li>
+                    <li class="win-list-item"></li>
+                    <li class="win-list-item"></li>
+                    <li class="win-list-item"></li>
+                </ul>
+            </div>
 
-        <div id="wins">
-            <ul id="win-list">
-                <li class="win-list-item"></li>
-                <li class="win-list-item"></li>
-                <li class="win-list-item"></li>
-                <li class="win-list-item"></li>
-            </ul>
+            <button>Pelaa</button>
         </div>
-
-        <button>Pelaa</button>
 
     </section>
 </body>
