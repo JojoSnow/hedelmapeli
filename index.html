@@ -14,21 +14,29 @@
     <section id="main">
         <div id="left-column">
             <div id="div-money">
-                <p id="your-money">Rahaa: <span id="money"></span>€</p>
-                <p id="bet">Panos: <span id="bet-money"></span>€</p>
+                <p id="your-money">Rahaa: <span id="money">50</span>€</p>
+                <p id="bet">Panos: <span id="bet-money">1</span>€</p>
                 <ul id="bet-list">
-                    <li class="bet-item">1€</li>
-                    <li class="bet-item">2€</li>
-                    <li class="bet-item">3€</li>
+                    <li class="bet-item" id="one-bet">1€</li>
+                    <li class="bet-item" id="two-bet">2€</li>
+                    <li class="bet-item" id="three-bet">3€</li>
                 </ul>
             </div>
 
             <div id="roulette">
                 <ul id="roulette-list">
-                    <li class="roulette-list-item"><img src="/img/apple.png" alt="random-image"></li>
-                    <li class="roulette-list-item"><img src="/img/cherry.png" alt="random-image"></li>
-                    <li class="roulette-list-item"><img src="/img/pear.png" alt="random-image"></li>
-                    <li class="roulette-list-item"><img src="/img/watermelon.png" alt="random-image"></li>
+                    <li class="roulette-list-item">
+                        <img src="/img/apple.png" class="random-image" alt="random-image">
+                    </li>
+                    <li class="roulette-list-item">
+                        <img src="/img/cherry.png" class="random-image" alt="random-image">
+                    </li>
+                    <li class="roulette-list-item">
+                        <img src="/img/pear.png" class="random-image" alt="random-image">
+                    </li>
+                    <li class="roulette-list-item">
+                        <img src="/img/watermelon.png" class="random-image" alt="random-image">
+                    </li>
                 </ul>
             </div>
         </div>
@@ -72,5 +80,7 @@
         </div>
 
     </section>
+
+    <script src="main.js"></script>
 </body>
 </html>

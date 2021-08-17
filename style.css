@@ -125,6 +125,7 @@ header {
 
 #wins {
     background-color: var(--light-green);
+    clear: both;
 }
 
 #win-list {
@@ -140,13 +141,20 @@ header {
 }
 
 .win-list-item img {
-    height: 70px;
+    height: 65px;
     padding: 0 4px;
     margin: 0;
 }
 
 .your-win {
-    text-align: right;
+    float: right;
+    font-size: 2em;
+    margin: 4px 7px;
+    padding: 8px 18px;
+    background-image: url(/img/coin.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: var(--dark-green);
 }
 
 /*----------BUTTON----------*/

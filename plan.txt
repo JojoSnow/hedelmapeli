@@ -2,4 +2,16 @@
 2. Do CSS
     - style the page
 3. Do JS
-    - get the game working
+    - panos nappulat toimimaan
+        *vaihda panos klikattuun
+    - pelaa nappi toimimaan
+        *kuvat randomisoituvat
+        *kertoo tuleeko voitto = lisää voiton pelirahaan
+        *jos voitto on tullut uusi painallus poistaa voiton merkinnän
+    - peliraha loppuu = ei voi enää painaa pelaa
+
+
+
+Toteuta JavaScriptillä perinteinen hedelmäpeli, jossa on tavoitteena saada tiettyjä kuviosarjoja. Vaatimuksena on, että pelissä on kolme arvottavaa rullaa. Rullat pyörähtävät liikkeelle kun painetaan nappia. Kun kuvat on arvottu ohjelma kertoo, saadaanko sillä voittoa.
+
+Kun peli alkaa on pelaajalla tietty määrä pelirahaa, joita käytetään jokaisella pelikierroksella. Pelirahasta voi käyttäjä valita pelikierroksella käytettävän panoksen. Kun peli arpoo käyttäjälle voittosarjan, lisätään voitot rahamäärään. Peli loppuu, kun peliraha loppuu. Alla on esimerkki, siitä, miltä pelin käyttöliittymä voisi näyttää.
