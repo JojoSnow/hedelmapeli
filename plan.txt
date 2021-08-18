@@ -3,11 +3,14 @@
     - style the page
 3. Do JS
     - panos nappulat toimimaan
-        *vaihda panos klikattuun
+        *vaihda panos klikattuun - done
     - pelaa nappi toimimaan
         *kuvat randomisoituvat
         *kertoo tuleeko voitto = lisää voiton pelirahaan
         *jos voitto on tullut uusi painallus poistaa voiton merkinnän
+    - voitto tai häviö
+        *lisätään pelirahaan
+        *poistetaan pelirahasta
     - peliraha loppuu = ei voi enää painaa pelaa
 
 

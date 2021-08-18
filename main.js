@@ -1,23 +1,23 @@
 let playMoney = 50;
 let betMoneyArray = [1, 2, 3];
 let winMoney = [2, 4, 6, 8];
-let randomImg = ['/img/apple.png', '/img/cherry.png', '/img/pear.png', '/img/watermelon.png'];
+let randomImgArray = ['img/apple.png', 'img/cherry.png', 'img/pear.png', 'img/watermelon.png'];
 
-let bets = document.querySelectorAll('.bet-item')
+let betEvent = document.querySelectorAll('.bet-item');
+let btnClick = document.getElementById('button');
 
-let betMoney = document.getElementById('bet-money');
-
-bets.forEach(bet => bet.addEventListener('click', selectBet));
+betEvent.forEach(bet => bet.addEventListener('mouseup', selectBet));
+btnClick.addEventListener('click', playGame);
 
 function selectBet(event) {
     let betTarget = event.target;
     let target = '';
 
-    if(betTarget = document.getElementById('one-bet')) {
+    if(betTarget === document.getElementById('one-bet')) {
         target = betTarget.getAttribute('id');
-    } else if (betTarget = document.getElementById('two-bet')) {
+    } else if (betTarget === document.getElementById('two-bet')) {
         target = betTarget.getAttribute('id');
-    } else if (betTarget = document.getElementById('three-bet')) {
+    } else if (betTarget === document.getElementById('three-bet')) {
         target = betTarget.getAttribute('id');
     } else {
         console.log('bet select error');
@@ -37,4 +37,14 @@ function selectBet(event) {
             console.log('innerHTML bet error');
             break;
     }
+}
+
+function playGame() {
+    let randomNum = Math.floor(Math.random() * randomImgArray.length);
+    let imgOne = document.getElementById('slot-one');
+    let imgTwo = document.getElementById('slot-two');
+    let imgThree = document.getElementById('slot-three');
+    let imgFour = document.getElementById('slot-four');
+    
+    imgOne.scr = randomImgArray[randomNum];
 }
