@@ -129,7 +129,7 @@ function countMoney() {
 }
 
 function tooBigBet() {
-    document.getElementById('tell-text').innerText = 'Panoksesi on liian suuri \nVaihda panostasi';
+    document.getElementById('tell-text').innerText = 'Panoksesi on liian suuri \nVaihda panoksesi';
 
     if (chosenBet > playMoney && playMoney <= 1) {
         betEvent.forEach(bet => bet.removeEventListener('mouseup', selectBet));
@@ -143,6 +143,6 @@ function tooBigBet() {
 
 function endGame() {
     btnClick.removeEventListener('click', startGame);
-    document.getElementById('tell-text').innerText = 'Rahasi loppuivat';
-    
+    document.getElementById('tell-text').innerText = 'Rahasi loppuivat';   
+    document.getElementById('button').style.display = 'none';
 }

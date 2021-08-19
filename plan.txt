@@ -1,7 +1,7 @@
 1. Do HTML - done
 2. Do CSS
     - style the page - done
-    - viimeistely
+    - viimeistely - done
 3. Do JS
     - panos nappulat toimimaan
         *vaihda panos klikattuun - done
@@ -12,10 +12,4 @@
         *lisätään pelirahaan - done
         *poistetaan pelirahasta - done
     - peliraha loppuu = ei voi enää painaa pelaa - done
-    - panos ei voi mennä yli kuinka paljon pelirahaa on jäljellä
-
-
-
-Toteuta JavaScriptillä perinteinen hedelmäpeli, jossa on tavoitteena saada tiettyjä kuviosarjoja. Vaatimuksena on, että pelissä on kolme arvottavaa rullaa. Rullat pyörähtävät liikkeelle kun painetaan nappia. Kun kuvat on arvottu ohjelma kertoo, saadaanko sillä voittoa.
-
-Kun peli alkaa on pelaajalla tietty määrä pelirahaa, joita käytetään jokaisella pelikierroksella. Pelirahasta voi käyttäjä valita pelikierroksella käytettävän panoksen. Kun peli arpoo käyttäjälle voittosarjan, lisätään voitot rahamäärään. Peli loppuu, kun peliraha loppuu.
+    - panos ei voi mennä yli kuinka paljon pelirahaa on jäljellä - done
