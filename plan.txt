@@ -11,7 +11,8 @@
     - voitto tai häviö
         *lisätään pelirahaan - done
         *poistetaan pelirahasta - done
-    - peliraha loppuu = ei voi enää painaa pelaa
+    - peliraha loppuu = ei voi enää painaa pelaa - done
+    - panos ei voi mennä yli kuinka paljon pelirahaa on jäljellä
 
 
 

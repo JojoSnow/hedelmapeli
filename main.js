@@ -16,9 +16,9 @@ function selectBet(event) {
 
     if (betTarget === document.getElementById('one-bet')) {
         target = betTarget.getAttribute('id');
-    } else if (betTarget === document.getElementById('two-bet')) {
+    } else if (betTarget === document.getElementById('two-bet') && playMoney >= 2) {
         target = betTarget.getAttribute('id');
-    } else if (betTarget === document.getElementById('three-bet')) {
+    } else if (betTarget === document.getElementById('three-bet') && playMoney >= 3) {
         target = betTarget.getAttribute('id');
     } else {
         console.log('bet select error');
@@ -30,13 +30,17 @@ function selectBet(event) {
             chosenBet = 1;
             break;
         case 'two-bet':
-            document.getElementById('bet-money').innerHTML = betMoneyArray[1];
-            chosenBet = 2;
-            break;
+            if (playMoney >= 2) {
+                document.getElementById('bet-money').innerHTML = betMoneyArray[1];
+                chosenBet = 2;
+                break;
+            }
         case 'three-bet':
-            document.getElementById('bet-money').innerHTML = betMoneyArray[2];
-            chosenBet = 3;
-            break;
+            if (playMoney >= 3) {
+                document.getElementById('bet-money').innerHTML = betMoneyArray[2];
+                chosenBet = 3;
+                break;
+            }
         default:
             console.log('innerHTML bet error');
             break;
@@ -46,6 +50,9 @@ function selectBet(event) {
 function startGame() {
     randomizeSlots();
     countMoney();
+    if (playMoney == 0) {
+        endGame();
+    }
 }
 
 function randomizeSlots() {
@@ -90,8 +97,10 @@ function countMoney() {
                 console.log('slots win/lose error');
         }
     }
-    const winOrLose = document.getElementById('win-or-lose-text');
+
+    const winOrLose = document.getElementById('tell-text');
     let money = document.getElementById('money');
+
     if (apple == 4) {
         playMoney = playMoney + (winMoneyArray[0] * chosenBet / 2);
         money.innerText = playMoney;
@@ -113,4 +122,27 @@ function countMoney() {
         money.innerText = playMoney;
         winOrLose.innerText = 'Ei voittoa';
     }
+
+    if (playMoney < chosenBet) {
+        tooBigBet();
+    } 
+}
+
+function tooBigBet() {
+    document.getElementById('tell-text').innerText = 'Panoksesi on liian suuri \nVaihda panostasi';
+
+    if (chosenBet > playMoney && playMoney <= 1) {
+        betEvent.forEach(bet => bet.removeEventListener('mouseup', selectBet));
+        document.getElementById('one-bet').addEventListener('mouseup', selectBet);
+    } else if (chosenBet > playMoney && playMoney <= 2) {
+        betEvent.forEach(bet => bet.removeEventListener('mouseup', selectBet));
+        document.getElementById('one-bet').addEventListener('mouseup', selectBet);
+        document.getElementById('two-bet').addEventListener('mouseup', selectBet);        
+    }
+}
+
+function endGame() {
+    btnClick.removeEventListener('click', startGame);
+    document.getElementById('tell-text').innerText = 'Rahasi loppuivat';
+    
 }
